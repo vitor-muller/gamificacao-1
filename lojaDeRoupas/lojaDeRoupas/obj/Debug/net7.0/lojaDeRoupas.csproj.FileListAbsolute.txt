@@ -1,0 +1,14 @@
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\bin\Debug\net7.0\lojaDeRoupas.exe
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\bin\Debug\net7.0\lojaDeRoupas.deps.json
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\bin\Debug\net7.0\lojaDeRoupas.runtimeconfig.json
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\bin\Debug\net7.0\lojaDeRoupas.dll
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\bin\Debug\net7.0\lojaDeRoupas.pdb
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\obj\Debug\net7.0\lojaDeRoupas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\obj\Debug\net7.0\lojaDeRoupas.AssemblyInfoInputs.cache
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\obj\Debug\net7.0\lojaDeRoupas.AssemblyInfo.cs
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\obj\Debug\net7.0\lojaDeRoupas.csproj.CoreCompileInputs.cache
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\obj\Debug\net7.0\lojaDeRoupas.dll
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\obj\Debug\net7.0\refint\lojaDeRoupas.dll
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\obj\Debug\net7.0\lojaDeRoupas.pdb
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\obj\Debug\net7.0\lojaDeRoupas.genruntimeconfig.cache
+C:\Users\Sharp\OneDrive\Documentos\GitHub\lojaDeRoupas\lojaDeRoupas\obj\Debug\net7.0\ref\lojaDeRoupas.dll
