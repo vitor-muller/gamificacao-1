@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Vitor\\code\\c#\\poo\\gamificacao-1\\lojaDeRoupas\\lojaDeRoupas\\lojaDeRoupas.csproj": {}
+    "C:\\Users\\Sharp\\OneDrive\\Documentos\\GitHub\\lojaDeRoupas\\lojaDeRoupas\\lojaDeRoupas.csproj": {}
   },
   "projects": {
-    "C:\\Vitor\\code\\c#\\poo\\gamificacao-1\\lojaDeRoupas\\lojaDeRoupas\\lojaDeRoupas.csproj": {
+    "C:\\Users\\Sharp\\OneDrive\\Documentos\\GitHub\\lojaDeRoupas\\lojaDeRoupas\\lojaDeRoupas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Vitor\\code\\c#\\poo\\gamificacao-1\\lojaDeRoupas\\lojaDeRoupas\\lojaDeRoupas.csproj",
+        "projectUniqueName": "C:\\Users\\Sharp\\OneDrive\\Documentos\\GitHub\\lojaDeRoupas\\lojaDeRoupas\\lojaDeRoupas.csproj",
         "projectName": "lojaDeRoupas",
-        "projectPath": "C:\\Vitor\\code\\c#\\poo\\gamificacao-1\\lojaDeRoupas\\lojaDeRoupas\\lojaDeRoupas.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Vitor\\code\\c#\\poo\\gamificacao-1\\lojaDeRoupas\\lojaDeRoupas\\obj\\",
+        "projectPath": "C:\\Users\\Sharp\\OneDrive\\Documentos\\GitHub\\lojaDeRoupas\\lojaDeRoupas\\lojaDeRoupas.csproj",
+        "packagesPath": "C:\\Users\\Sharp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sharp\\OneDrive\\Documentos\\GitHub\\lojaDeRoupas\\lojaDeRoupas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sharp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
