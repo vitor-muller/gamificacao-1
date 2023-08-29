@@ -1,22 +1,30 @@
 ﻿using lojaDeRoupas.Modelos;
-
+using lojaDeRoupas.UI;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace lojaDeRoupas
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Cliente cliente = new Cliente
-            {
-                Nome = "Bruno",
-                Endereco = "Rua riachuelo",
-                Sobrenome = "Gomes",
-                Numerotelefone = "69999181330"
-            };
+            CategoriaUI catUI = new CategoriaUI();
+            List<Categoria> listaCategoria = new List<Categoria>();
+            listaCategoria.Add(catUI.criarCategoria());
 
-            Console.WriteLine("Cliente " + cliente.Nome + " " + cliente.Sobrenome + " Cadastrado");
+            ProdutoUI prodUI = new ProdutoUI();
+            List<Produto> listaProduto = new List<Produto>();
+            listaProduto.Add(prodUI.criarProduto(listaProduto.Count, listaCategoria));
+
+            Console.WriteLine(">Categoria");
+            Console.WriteLine("Nome: " + listaCategoria[0].Nome);
+            Console.WriteLine("Descrição: "+ listaCategoria[0].Descricao);
+
+            Console.WriteLine(">Produto");
+            Console.WriteLine("Nome: " + listaProduto[0].Nome);
+            Console.WriteLine("Descrição: " + listaProduto[0].Descricao);
+            Console.WriteLine("Categoria: " + listaProduto[0].categoria.Nome);
         }
     }
 }

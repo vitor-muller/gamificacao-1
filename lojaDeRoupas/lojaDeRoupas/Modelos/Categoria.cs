@@ -6,10 +6,25 @@ using System.Threading.Tasks;
 
 namespace lojaDeRoupas.Modelos
 {
-    internal class Categoria
+    public class Categoria
     {
-        public string? Nome {get; set;}
-        public string? Descricao { get; set;}
+        private string? nome;
+        private string? descricao;
 
+        public string? Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+        public string? Descricao
+        {
+            get { return descricao; }
+            set { descricao = value; }
+        }
+
+        public Categoria(string nome  = "Unknown", string descricao = "Descrição aqui") {
+            this.nome = nome;
+            this.descricao = descricao;
+        }
     }
 }

@@ -6,11 +6,32 @@ using System.Threading.Tasks;
 
 namespace lojaDeRoupas.Modelos
 {
-    internal class Cliente
+    public class Cliente
     {
-        public string? Nome { get; set; }
-        public string? Sobrenome { get; set; }
-        public string? Endereco { get; set;}
-        public string? Numerotelefone { get; set;}
+        private string? nome;
+        private string? sobrenome;
+        private string? endereco;
+        private string? numerotelefone;
+
+        public string? Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+        public string? Sobrenome 
+        {
+            get { return sobrenome; }
+            set { sobrenome = value; }
+        }
+        public string? Endereco
+        {
+            get { return endereco; }
+            set { endereco = value; }
+        }
+        public string? NumeroTelefone
+        {
+            get { return numerotelefone; }
+            set { numerotelefone = value; }
+        }
     }
 }

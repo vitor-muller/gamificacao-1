@@ -6,12 +6,42 @@ using System.Threading.Tasks;
 
 namespace lojaDeRoupas.Modelos
 {
-    internal class Produto
+    public class Produto
     {
-        public int? Id { get; set; }
-        public string? Nome { get; set; }
-        public string? Descricao { get; set; }
-        public decimal? Preco { get; set; }
-        public Categoria? Categoria { get; set; }
+        private int? id;
+        private string? nome;
+        private string? descricao;
+        private decimal? preco;
+        public Categoria? categoria;
+
+        public int? Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public string? Nome
+        {
+            get { return nome; } 
+            set { nome = value; }
+        }
+        public string? Descricao
+        {
+            get { return descricao; }
+            set { descricao = value; }
+        }
+        public decimal? Preco
+        {
+            get { return preco; }
+            set { preco = value; }
+        }
+
+        public Produto(int id, string nome, string descricao, decimal preco, Categoria cat)
+        {
+            this.id = id;
+            this.nome = nome;
+            this.descricao = descricao;
+            this.preco = preco;
+            this.categoria = cat;
+        }
     }
 }
