@@ -11,7 +11,7 @@ namespace lojaDeRoupas.Modelos
         private string? nome;
         private string? sobrenome;
         private string? endereco;
-        private string? numerotelefone;
+        private string? telefone;
 
         public string? Nome
         {
@@ -28,10 +28,18 @@ namespace lojaDeRoupas.Modelos
             get { return endereco; }
             set { endereco = value; }
         }
-        public string? NumeroTelefone
+        public string? Telefone
         {
-            get { return numerotelefone; }
-            set { numerotelefone = value; }
+            get { return telefone; }
+            set { telefone = value; }
+        }
+
+        public Cliente(string nome, string sobrenome, string endereco, string telefone)
+        {
+            this.Nome = nome;
+            this.Sobrenome = sobrenome;
+            this.Endereco = endereco;
+            this.Telefone = telefone;
         }
     }
 }
