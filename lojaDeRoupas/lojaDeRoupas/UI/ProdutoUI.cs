@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace lojaDeRoupas.UI
 {
-    internal class ProdutoUI
+    public class ProdutoUI
     {
         private CategoriaUI catUI = new CategoriaUI();
         public Produto criarProduto(int id, List<Categoria> listaCategoria)

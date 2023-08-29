@@ -39,5 +39,13 @@ namespace lojaDeRoupas.Modelos
             set { valorTotal = value; }
         }
 
+        public Venda(int id, Cliente cliente, List<Produto> produtos, DateTime dataVenda, decimal valor)
+        {
+            this.Id = id;
+            this.Cliente = cliente;
+            this.Produtos = produtos;
+            this.DataVenda = dataVenda;
+            this.ValorTotal = valor;
+        }
     }
 }

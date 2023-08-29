@@ -24,7 +24,7 @@ namespace lojaDeRoupas
             Console.WriteLine(">Produto");
             Console.WriteLine("Nome: " + listaProduto[0].Nome);
             Console.WriteLine("Descrição: " + listaProduto[0].Descricao);
-            Console.WriteLine("Categoria: " + listaProduto[0].categoria.Nome);
+            Console.WriteLine("Categoria: " + listaProduto[0].Categoria.Nome);
         }
     }
 }

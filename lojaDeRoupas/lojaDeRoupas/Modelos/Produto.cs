@@ -12,7 +12,7 @@ namespace lojaDeRoupas.Modelos
         private string? nome;
         private string? descricao;
         private decimal? preco;
-        public Categoria? categoria;
+        private Categoria? categoria;
 
         public int? Id
         {
@@ -34,14 +34,19 @@ namespace lojaDeRoupas.Modelos
             get { return preco; }
             set { preco = value; }
         }
+        public Categoria? Categoria
+        {
+            get { return categoria; }
+            set { categoria = value; }
+        }
 
         public Produto(int id, string nome, string descricao, decimal preco, Categoria cat)
         {
-            this.id = id;
-            this.nome = nome;
-            this.descricao = descricao;
-            this.preco = preco;
-            this.categoria = cat;
+            this.Id = id;
+            this.Nome = nome;
+            this.Descricao = descricao;
+            this.Preco = preco;
+            this.Categoria = cat;
         }
     }
 }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace lojaDeRoupas.UI
 {
-    internal class ClienteUI
+    public class ClienteUI
     {
-        public Cliente criarProduto()
+        public Cliente criarCliente()
         {
             Console.WriteLine("Entre o nome do Cliente: ");
             string nome = Console.ReadLine();
