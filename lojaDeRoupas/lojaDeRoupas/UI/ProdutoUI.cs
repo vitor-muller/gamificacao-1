@@ -14,8 +14,10 @@ namespace lojaDeRoupas.UI
         {
             Console.WriteLine("Entre o nome do produto: ");
             string nome = Console.ReadLine();
+
             Console.WriteLine("Entre a descrição do produto: ");
             string descricao = Console.ReadLine();
+
             Console.WriteLine("Entre o preco do produto: ");
             decimal preco = Convert.ToDecimal( Console.ReadLine() );
 
@@ -24,6 +26,18 @@ namespace lojaDeRoupas.UI
             Produto produto = new Produto(id, nome, descricao, preco, cat);
 
             return produto;
+        }
+
+        public decimal calcularPreco(List<Produto> produtos)
+        {
+            decimal valor = 0;
+
+            foreach (Produto produto in produtos)
+            {
+                valor += produto.Preco;
+            }
+
+            return valor;
         }
     }
 }

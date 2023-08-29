@@ -13,8 +13,10 @@ namespace lojaDeRoupas.UI
         {
             Console.WriteLine("Entre o nome da Categoria: ");
             string nome = Console.ReadLine();
+
             Console.WriteLine("Entre a descrição da Categoria: ");
             string desc = Console.ReadLine();
+
             Categoria categoria = new Categoria(nome, desc);
 
             return categoria;

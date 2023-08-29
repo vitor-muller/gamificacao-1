@@ -27,5 +27,21 @@ namespace lojaDeRoupas.UI
 
             return cliente;
         }
+
+        public Cliente buscarCliente(List<Cliente> listaCliente)
+        {
+            Console.WriteLine("Entre o nome do Cliente: ");
+            string nomeBuscado = Console.ReadLine();
+            // Buscando o cliente
+            foreach (Cliente cliente in listaCliente)
+            {
+                if (cliente.Nome == nomeBuscado)
+                {
+                    return cliente; // Retorna o cliente se ele foi encontrado
+                }
+            }
+
+            return null;
+        }
     }
 }
