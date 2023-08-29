@@ -8,6 +8,7 @@ namespace lojaDeRoupas.Modelos
 {
     internal class Cliente
     {
+        public int id;
         public string? Nome { get; set; }
         public string? Sobrenome { get; set; }
         public string? Endereco { get; set;}
