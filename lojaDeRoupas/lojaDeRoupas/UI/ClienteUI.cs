@@ -11,10 +11,11 @@ namespace lojaDeRoupas.UI
     {
         public Cliente criarCliente()
         {
+            Console.WriteLine("\n>>>>>>Adicionando um Cliente<<<<<<");
             Console.WriteLine("Entre o nome do Cliente: ");
             string nome = Console.ReadLine();
 
-            Console.WriteLine("Entre o nome do Cliente: ");
+            Console.WriteLine("Entre o sobrenome do Cliente: ");
             string sobrenome = Console.ReadLine();
 
             Console.WriteLine("Entre o endereço do Cliente: ");
@@ -42,6 +43,15 @@ namespace lojaDeRoupas.UI
             }
 
             return null;
+        }
+
+        public void imprimirCliente(Cliente cliente)
+        {
+            Console.WriteLine("\n>Cliente");
+            Console.WriteLine("Nome: " + cliente.Nome);
+            Console.WriteLine("Sobrenome: " + cliente.Sobrenome);
+            Console.WriteLine("Endereco: " + cliente.Endereco);
+            Console.WriteLine("Telefone: " + cliente.Telefone);
         }
     }
 }

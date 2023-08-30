@@ -12,6 +12,7 @@ namespace lojaDeRoupas.UI
         private CategoriaUI catUI = new CategoriaUI();
         public Produto criarProduto(int id, List<Categoria> listaCategoria)
         {
+            Console.WriteLine("\n>>>>>>Adicionando um Produto<<<<<<");
             Console.WriteLine("Entre o nome do produto: ");
             string nome = Console.ReadLine();
 
@@ -38,6 +39,23 @@ namespace lojaDeRoupas.UI
             }
 
             return valor;
+        }
+
+        public void imprimirProduto(Produto produto)
+        {
+            Console.WriteLine("\n>>Produto");
+            Console.WriteLine("Nome: " + produto.Nome);
+            Console.WriteLine("Descrição: " + produto.Descricao);
+            Console.WriteLine("Categoria: " + produto.Categoria.Nome);
+        }
+
+        public void imprimirTodosProdutos(List<Produto> produtos)
+        {
+            Console.WriteLine("/n>Lista de Produtos");
+            foreach(Produto produto in produtos)
+            {
+                imprimirProduto(produto);
+            }
         }
     }
 }

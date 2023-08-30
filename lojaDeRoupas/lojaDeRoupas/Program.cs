@@ -9,22 +9,29 @@ namespace lojaDeRoupas
     {
         static void Main(string[] args)
         {
-            CategoriaUI catUI = new CategoriaUI();
-            List<Categoria> listaCategoria = new List<Categoria>();
-            listaCategoria.Add(catUI.criarCategoria());
+            CategoriaUI catUI = new CategoriaUI();//instanciando a UI
+            List<Categoria> listaCategoria = new List<Categoria>();//Criando uma lista de Categorias
+            listaCategoria.Add(catUI.criarCategoria());//adicionando uma categoria a lista
+
+            ClienteUI clienteUI = new ClienteUI();
+            List<Cliente> listaCliente = new List<Cliente>();
+            listaCliente.Add(clienteUI.criarCliente());
 
             ProdutoUI prodUI = new ProdutoUI();
             List<Produto> listaProduto = new List<Produto>();
             listaProduto.Add(prodUI.criarProduto(listaProduto.Count, listaCategoria));
 
-            Console.WriteLine(">Categoria");
-            Console.WriteLine("Nome: " + listaCategoria[0].Nome);
-            Console.WriteLine("Descrição: "+ listaCategoria[0].Descricao);
+            VendaUI vendaUI = new VendaUI();
+            List<Venda> listaVenda = new List<Venda>();
+            listaVenda.Add(vendaUI.criarVenda(listaVenda.Count, listaProduto, listaCliente));
 
-            Console.WriteLine(">Produto");
-            Console.WriteLine("Nome: " + listaProduto[0].Nome);
-            Console.WriteLine("Descrição: " + listaProduto[0].Descricao);
-            Console.WriteLine("Categoria: " + listaProduto[0].Categoria.Nome);
+            //imprimindo
+            Console.Clear();
+            catUI.imprimirCategoria(listaCategoria[0]);
+
+            prodUI.imprimirTodosProdutos(listaProduto);
+
+            clienteUI.imprimirCliente(listaCliente[0]);
         }
     }
 }

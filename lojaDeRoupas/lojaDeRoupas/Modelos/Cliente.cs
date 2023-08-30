@@ -8,27 +8,27 @@ namespace lojaDeRoupas.Modelos
 {
     public class Cliente
     {
-        private string? nome;
-        private string? sobrenome;
-        private string? endereco;
-        private string? telefone;
+        private string nome;
+        private string sobrenome;
+        private string endereco;
+        private string telefone;
 
-        public string? Nome
+        public string Nome
         {
             get { return nome; }
             set { nome = value; }
         }
-        public string? Sobrenome 
+        public string Sobrenome 
         {
             get { return sobrenome; }
             set { sobrenome = value; }
         }
-        public string? Endereco
+        public string Endereco
         {
             get { return endereco; }
             set { endereco = value; }
         }
-        public string? Telefone
+        public string Telefone
         {
             get { return telefone; }
             set { telefone = value; }
