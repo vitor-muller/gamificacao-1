@@ -43,15 +43,15 @@ namespace lojaDeRoupas.UI
 
         public void imprimirProduto(Produto produto)
         {
-            Console.WriteLine("\n>>Produto");
+            Console.WriteLine(">>Produto");
             Console.WriteLine("Nome: " + produto.Nome);
             Console.WriteLine("Descrição: " + produto.Descricao);
-            Console.WriteLine("Categoria: " + produto.Categoria.Nome);
+            Console.WriteLine("Categoria: " + produto.Categoria.Nome+"\n");
         }
 
         public void imprimirTodosProdutos(List<Produto> produtos)
         {
-            Console.WriteLine("/n>Lista de Produtos");
+            Console.WriteLine("\n>Lista de Produtos");
             foreach(Produto produto in produtos)
             {
                 imprimirProduto(produto);
