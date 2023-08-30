@@ -10,6 +10,8 @@ namespace lojaDeRoupas
         {
             CategoriaUI categoriaUI = new CategoriaUI();
             ClienteUI clienteUI = new ClienteUI();
+            ProdutoUI produtoUI = new ProdutoUI();
+            List<Categoria> categorias = new List<Categoria>();
             while (true)
             {
                 Console.WriteLine("Menu Principal:");
@@ -24,20 +26,17 @@ namespace lojaDeRoupas
                 switch (escolha)
                 {
                     case 1:
-                        categoriaUI.MenuCategoria();
+                        categoriaUI.MenuCategoria(categorias);
                         break;
                     case 2:
                         clienteUI.MenuCliente();
                         break;
-                    /*case 2:
-                        produtoUI.MenuProduto();
-                        break;
                     case 3:
-                        clienteUI.MenuCliente();
+                        //clienteUI.MenuVendas();
                         break;
                     case 4:
-                        vendaUI.MenuVenda();
-                        break;*/
+                        produtoUI.MenuProduto(categorias);
+                        break;
                     case 0:
                         Environment.Exit(0);
                         break;

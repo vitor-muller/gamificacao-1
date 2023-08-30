@@ -11,10 +11,10 @@ namespace lojaDeRoupas.Interface
 
     class CategoriaUI
     {
-        private List<Categoria> categorias = new List<Categoria>();
+        //private List<Categoria> categorias = new List<Categoria>();
         private int nextCategoryId = 1;
 
-        public void MenuCategoria()
+        public void MenuCategoria(List<Categoria> categorias)
         {
             while (true)
             {
@@ -30,16 +30,16 @@ namespace lojaDeRoupas.Interface
                 switch (escolha)
                 {
                     case 1:
-                        RegistrarCategoria();
+                        RegistrarCategoria(categorias);
                         break;
                     case 2:
-                        ListarCategorias();
+                        ListarCategorias(categorias);
                         break;
                     case 3:
-                        RemoverCategoria();
+                        RemoverCategoria(categorias);
                         break;
                     case 4:
-                        BuscarCategoriaPorId();
+                        BuscarCategoriaPorId(categorias);
                         break;
                     case 0:
                         return;
@@ -50,7 +50,7 @@ namespace lojaDeRoupas.Interface
             }
         }
 
-        private void RegistrarCategoria()
+        private void RegistrarCategoria(List<Categoria> categorias)
         {
             Console.WriteLine("Informe o nome da categoria:");
             string nome = Console.ReadLine();
@@ -68,7 +68,7 @@ namespace lojaDeRoupas.Interface
             Console.WriteLine("Categoria registrada com sucesso!");
         }
 
-        private void ListarCategorias()
+        private void ListarCategorias(List<Categoria> categorias)
         {
             Console.WriteLine("Listagem de Categorias:");
             foreach (var categoria in categorias)
@@ -77,7 +77,7 @@ namespace lojaDeRoupas.Interface
             }
         }
 
-        private void RemoverCategoria()
+        private void RemoverCategoria(List<Categoria> categorias)
         {
             Console.WriteLine("Informe o ID da categoria que deseja remover:");
             int id = int.Parse(Console.ReadLine());
@@ -95,7 +95,7 @@ namespace lojaDeRoupas.Interface
             }
         }
 
-        private void BuscarCategoriaPorId()
+        private void BuscarCategoriaPorId(List<Categoria> categorias)
         {
             Console.WriteLine("Informe o ID da categoria que deseja buscar:");
             int id = int.Parse(Console.ReadLine());
