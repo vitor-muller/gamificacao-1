@@ -9,7 +9,7 @@ namespace lojaDeRoupas.Interface
 {
     internal class ProdutoUI
     {
-        private List<Produto> produtos = new List<Produto>();
+        public List<Produto> produtos = new List<Produto>();
         private int nextProdutoId = 1;
 
         public void RegistrarProduto(List<Categoria> categorias)
@@ -47,7 +47,7 @@ namespace lojaDeRoupas.Interface
             }
         }
 
-        public void ListarProdutos()
+        private void ListarProdutos()
         {
             Console.WriteLine("Listagem de Produtos:");
             foreach (var produto in produtos)
@@ -56,7 +56,7 @@ namespace lojaDeRoupas.Interface
             }
         }
 
-        public void BuscarProdutoPorId()
+        private void BuscarProdutoPorId()
         {
             Console.WriteLine("Informe o ID do produto que deseja buscar:");
             int id = int.Parse(Console.ReadLine());
@@ -73,7 +73,7 @@ namespace lojaDeRoupas.Interface
             }
         }
 
-        public void RemoverProduto()
+        private void RemoverProduto()
         {
             Console.WriteLine("Informe o ID do produto que deseja remover:");
             int id = int.Parse(Console.ReadLine());
@@ -103,6 +103,7 @@ namespace lojaDeRoupas.Interface
         {
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("Menu de Produtos:");
                 Console.WriteLine("1. Registrar Produto");
                 Console.WriteLine("2. Listar Produtos");
@@ -116,20 +117,31 @@ namespace lojaDeRoupas.Interface
                 {
                     case 1:
                         RegistrarProduto(categorias);
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 2:
                         ListarProdutos();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 3:
                         BuscarProdutoPorId();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 4:
+                        ListarProdutos();
                         RemoverProduto();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 0:
                         return;
                     default:
                         Console.WriteLine("Opção inválida. Tente novamente.");
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                 }
             }

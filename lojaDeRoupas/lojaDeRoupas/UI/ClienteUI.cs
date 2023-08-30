@@ -9,7 +9,7 @@ namespace lojaDeRoupas.Interface
 {
     internal class ClienteUI
     {
-        private List<Cliente> clientes = new List<Cliente>();
+        public List<Cliente> clientes = new List<Cliente>();
         private int nextClienteId = 1;
 
         private void RegistrarCliente()
@@ -84,6 +84,7 @@ namespace lojaDeRoupas.Interface
         {
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("Menu de Clientes:");
                 Console.WriteLine("1. Registrar Cliente");
                 Console.WriteLine("2. Listar Clientes");
@@ -97,20 +98,31 @@ namespace lojaDeRoupas.Interface
                 {
                     case 1:
                         RegistrarCliente();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 2:
                         ListarClientes();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 3:
                         BuscarClientePorId();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 4:
+                        ListarClientes();
                         RemoverCliente();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 0:
                         return;
                     default:
                         Console.WriteLine("Opção inválida. Tente novamente.");
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                 }
             }

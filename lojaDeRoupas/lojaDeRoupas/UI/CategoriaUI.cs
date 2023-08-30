@@ -11,13 +11,14 @@ namespace lojaDeRoupas.Interface
 
     class CategoriaUI
     {
-        //private List<Categoria> categorias = new List<Categoria>();
+        public List<Categoria> categorias = new List<Categoria>();
         private int nextCategoryId = 1;
 
-        public void MenuCategoria(List<Categoria> categorias)
+        public void MenuCategoria()
         {
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("Menu de Categorias:");
                 Console.WriteLine("1. Registrar Categoria");
                 Console.WriteLine("2. Listar Categorias");
@@ -30,27 +31,38 @@ namespace lojaDeRoupas.Interface
                 switch (escolha)
                 {
                     case 1:
-                        RegistrarCategoria(categorias);
+                        RegistrarCategoria();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 2:
-                        ListarCategorias(categorias);
+                        ListarCategorias();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 3:
-                        RemoverCategoria(categorias);
+                        ListarCategorias();
+                        RemoverCategoria();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 4:
-                        BuscarCategoriaPorId(categorias);
+                        BuscarCategoriaPorId();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                     case 0:
                         return;
                     default:
                         Console.WriteLine("Opção inválida. Tente novamente.");
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
                 }
             }
         }
 
-        private void RegistrarCategoria(List<Categoria> categorias)
+        private void RegistrarCategoria()
         {
             Console.WriteLine("Informe o nome da categoria:");
             string nome = Console.ReadLine();
@@ -68,7 +80,7 @@ namespace lojaDeRoupas.Interface
             Console.WriteLine("Categoria registrada com sucesso!");
         }
 
-        private void ListarCategorias(List<Categoria> categorias)
+        private void ListarCategorias()
         {
             Console.WriteLine("Listagem de Categorias:");
             foreach (var categoria in categorias)
@@ -77,7 +89,7 @@ namespace lojaDeRoupas.Interface
             }
         }
 
-        private void RemoverCategoria(List<Categoria> categorias)
+        private void RemoverCategoria()
         {
             Console.WriteLine("Informe o ID da categoria que deseja remover:");
             int id = int.Parse(Console.ReadLine());
@@ -95,7 +107,7 @@ namespace lojaDeRoupas.Interface
             }
         }
 
-        private void BuscarCategoriaPorId(List<Categoria> categorias)
+        private void BuscarCategoriaPorId()
         {
             Console.WriteLine("Informe o ID da categoria que deseja buscar:");
             int id = int.Parse(Console.ReadLine());
