@@ -42,9 +42,19 @@ namespace lojaDeRoupas.UI
 
         public void imprimirCategoria(Categoria categoria)
         {
-            Console.WriteLine("\n>Categoria");
             Console.WriteLine("Nome: " + categoria.Nome);
             Console.WriteLine("Descrição: " + categoria.Descricao);
+            Console.WriteLine("-----------------------");
+        }
+
+        public void imprimirTodasCategorias(List<Categoria> categorias)
+        {
+            Console.WriteLine(">Lista de Categorias");
+            Console.WriteLine("-----------------------");
+            foreach (Categoria categoria in categorias)
+            {
+                imprimirCategoria(categoria);
+            }
         }
     }
 }

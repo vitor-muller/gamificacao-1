@@ -47,11 +47,21 @@ namespace lojaDeRoupas.UI
 
         public void imprimirCliente(Cliente cliente)
         {
-            Console.WriteLine("\n>Cliente");
             Console.WriteLine("Nome: " + cliente.Nome);
             Console.WriteLine("Sobrenome: " + cliente.Sobrenome);
             Console.WriteLine("Endereco: " + cliente.Endereco);
             Console.WriteLine("Telefone: " + cliente.Telefone);
+            Console.WriteLine("-----------------------");
+        }
+
+        public void imprimirTodosClientes(List<Cliente> clientes)
+        {
+            Console.WriteLine(">Lista de Clientes");
+            Console.WriteLine("-----------------------");
+            foreach (Cliente cliente in clientes)
+            {
+                imprimirCliente(cliente);
+            }
         }
     }
 }

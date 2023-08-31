@@ -21,5 +21,46 @@ namespace lojaDeRoupas.UI
 
             return venda;
         }
+
+        public void imprimirVenda(Venda venda)
+        {
+            Console.WriteLine("ID: " + venda.Id);
+            Console.WriteLine("Nome do Cliente: " + venda.Cliente.Nome + " " + venda.Cliente.Sobrenome);
+            Console.WriteLine("Data: " + venda.DataVenda);
+            Console.WriteLine("Items na lista: "+venda.Produtos.Count());
+            produtoUI.imprimirTodosProdutos(venda.Produtos);
+            Console.WriteLine("Preço Total: " + venda.ValorTotal);
+            Console.WriteLine("-----------------------");
+        }
+
+        public void imprimirTodasVendas(List<Venda> vendas)
+        {
+            Console.WriteLine(">Lista de Vendas");
+            Console.WriteLine("-----------------------");
+            foreach (Venda venda in vendas)
+            {
+                imprimirVenda(venda);
+            }
+        }
+
+        public List<Produto> adicionarItems(List<Produto> produtos)
+        {
+            List<Produto> carrinho = new List<Produto>();
+
+            int controle = 1;
+            while(controle != 0)
+            {
+                Console.Clear();
+                produtoUI.imprimirTodosProdutos(produtos);
+                Console.WriteLine("Entre o ID do produto que deseja adicionar(0 p/ sair): ");
+                controle = int.Parse( Console.ReadLine() );
+                if(controle > 0 && controle <= (produtos.Count))
+                {
+                    carrinho.Add( produtos[controle-1] );
+                }
+            }
+
+            return carrinho;
+        }
     }
 }
