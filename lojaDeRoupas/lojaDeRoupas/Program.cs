@@ -17,10 +17,10 @@ namespace lojaDeRoupas
             {
                 Console.Clear();
                 Console.WriteLine("Menu Principal:");
-                Console.WriteLine("1. Gerenciar Categoria");
-                Console.WriteLine("2. Gerenciar Clientes");
-                Console.WriteLine("3. Gerenciar Vendas");
-                Console.WriteLine("4. Gerenciar Produtos");
+                Console.WriteLine("1. Gerenciar Categorias");
+                Console.WriteLine("2. Gerenciar Produtos");
+                Console.WriteLine("3. Gerenciar Clientes");
+                Console.WriteLine("4. Gerenciar Vendas");
                 Console.WriteLine("0. Sair");
 
                 int escolha = int.Parse(Console.ReadLine());
@@ -31,13 +31,15 @@ namespace lojaDeRoupas
                         categoriaUI.MenuCategoria();
                         break;
                     case 2:
-                        clienteUI.MenuCliente();
+
+                        produtoUI.MenuProduto(categoriaUI.categorias);
                         break;
                     case 3:
-                        vendaUI.MenuVenda(clienteUI.clientes,produtoUI.produtos);
+                        clienteUI.MenuCliente();
                         break;
                     case 4:
-                        produtoUI.MenuProduto(categoriaUI.categorias);
+
+                        vendaUI.MenuVenda(clienteUI.clientes, produtoUI.produtos);
                         break;
                     case 0:
                         Environment.Exit(0);

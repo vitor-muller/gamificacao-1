@@ -14,53 +14,7 @@ namespace lojaDeRoupas.Interface
         public List<Categoria> categorias = new List<Categoria>();
         private int nextCategoryId = 1;
 
-        public void MenuCategoria()
-        {
-            while (true)
-            {
-                Console.Clear();
-                Console.WriteLine("Menu de Categorias:");
-                Console.WriteLine("1. Registrar Categoria");
-                Console.WriteLine("2. Listar Categorias");
-                Console.WriteLine("3. Remover Categoria");
-                Console.WriteLine("4. Buscar Categoria por Id");
-                Console.WriteLine("0. Voltar");
-
-                int escolha = int.Parse(Console.ReadLine());
-
-                switch (escolha)
-                {
-                    case 1:
-                        RegistrarCategoria();
-                        Console.WriteLine("Pressione qualquer tecla para continuar...");
-                        Console.ReadKey();
-                        break;
-                    case 2:
-                        ListarCategorias();
-                        Console.WriteLine("Pressione qualquer tecla para continuar...");
-                        Console.ReadKey();
-                        break;
-                    case 3:
-                        ListarCategorias();
-                        RemoverCategoria();
-                        Console.WriteLine("Pressione qualquer tecla para continuar...");
-                        Console.ReadKey();
-                        break;
-                    case 4:
-                        BuscarCategoriaPorId();
-                        Console.WriteLine("Pressione qualquer tecla para continuar...");
-                        Console.ReadKey();
-                        break;
-                    case 0:
-                        return;
-                    default:
-                        Console.WriteLine("Opção inválida. Tente novamente.");
-                        Console.WriteLine("Pressione qualquer tecla para continuar...");
-                        Console.ReadKey();
-                        break;
-                }
-            }
-        }
+        
 
         private void RegistrarCategoria()
         {
@@ -122,6 +76,53 @@ namespace lojaDeRoupas.Interface
             }
         }
 
-       
+        public void MenuCategoria()
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("Menu de Categorias:");
+                Console.WriteLine("1. Registrar Categoria");
+                Console.WriteLine("2. Listar Categorias");
+                Console.WriteLine("3. Remover Categoria");
+                Console.WriteLine("4. Buscar Categoria por Id");
+                Console.WriteLine("0. Voltar");
+
+                int escolha = int.Parse(Console.ReadLine());
+
+                switch (escolha)
+                {
+                    case 1:
+                        RegistrarCategoria();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
+                        break;
+                    case 2:
+                        ListarCategorias();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
+                        break;
+                    case 3:
+                        ListarCategorias();
+                        RemoverCategoria();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
+                        break;
+                    case 4:
+                        BuscarCategoriaPorId();
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
+                        break;
+                    case 0:
+                        return;
+                    default:
+                        Console.WriteLine("Opção inválida. Tente novamente.");
+                        Console.WriteLine("Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
+                        break;
+                }
+            }
+        }
+
     }
 }

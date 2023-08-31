@@ -65,7 +65,7 @@ namespace lojaDeRoupas.Interface
 
             if (produtoEncontrado != null)
             {
-                Console.WriteLine($"ID: {produtoEncontrado.Id}, Nome: {produtoEncontrado.Nome}, Preço: {produtoEncontrado.Preco:C}, Categoria: {produtoEncontrado.Categoria.Nome}");
+                Console.WriteLine($"ID: {produtoEncontrado.Id}, Nome: {produtoEncontrado.Nome}, Preço: {produtoEncontrado.Preco:C},Descrição:{produtoEncontrado.Descricao}, Categoria: {produtoEncontrado.Categoria.Nome}");
             }
             else
             {
